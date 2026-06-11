@@ -21,7 +21,7 @@ return new class extends Migration
             $table->date('acquired_at')->nullable();
             $table->integer('useful_life_months')->nullable();
 
-            $table->string('assigned_to')->nullable();
+            $table->nullableMorphs('assignee');
             $table->string('location')->nullable();
 
             $table->date('expires_at')->nullable();

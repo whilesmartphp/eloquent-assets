@@ -71,6 +71,11 @@ class Asset extends Model
         return $this->morphTo();
     }
 
+    public function assignee(): MorphTo
+    {
+        return $this->morphTo();
+    }
+
     public function scopeExpiringWithin(Builder $query, int $days): Builder
     {
         return $query->whereNotNull('expires_at')
